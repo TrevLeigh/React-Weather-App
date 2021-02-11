@@ -1,0 +1,42 @@
+main {
+    flex-grow: 1;
+    text-align: center;
+  }
+  footer {
+    padding: 2px;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #EEEEEE;
+    font-size: small;
+    text-align: center;
+  }
+  header {
+    padding: 25px;
+  }
+
+.weather-app {
+    min-height: 100vh;
+}
+
+.weather-header {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.night {
+    background: black;
+    .weather-header {
+        color: white;
+    }
+    .main {
+        color: white;
+    }
+}
+
+.day {
+    background: skyblue;
+    
+}

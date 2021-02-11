@@ -1,24 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Forecast from './components/Forecast/forecast';
 
-function App() {
+const App = () => {
+   let d = new Date();
+   let n = d.getHours();         
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className={`weather-app ${n > 19 || n < 6 ? 'night': 'day'}`}>
+      <header className={'weather-header'}>
+        <h1>Weather App</h1>
+        <h3>powered by React</h3>
       </header>
+      <main>
+        <Forecast />
+      </main>
     </div>
   );
 }
